@@ -4,6 +4,8 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
+
 public class MidTermExam {
 
     /**
@@ -105,31 +107,50 @@ public class MidTermExam {
 
     }
 
-        /**
-         * Ques-2:
-         * Create a method to return factorial value of input-int-value
-         * points: 10
-         */
-        /*
-         *
-         * eg:
-         * input -> 5
-         * returned value -> (5*4*3*2*1) = 120
-         *
-         * input -> 1
-         * returned value -> (1) = 1
-         *
-         * input -> 3
-         * returned value -> (3*2*1) = 6
-         *
-         * input -> 10
-         * returned value -> (10*9*8*7*6*5*4*3*2*1) =
-         */
+
         public static void main(String[] args) {
+
+            /**
+             * Q-2
+             */
+
             factorialValue(5);
             int[] num = {3, 5, 1, 4, 2, 7};
-            missingSmallestPositiveInteger(num);
+            int missingSmallPostNr = missingSmallestPositiveInteger(num);
+            System.out.println(missingSmallPostNr);
+
+            /**
+             *  Q3
+             *  input -> {"happY", "king", "peace", "living standard"} , {"king kong", "Happy", "PEACE"}
+             */
+            String[] firstValues = {"happY", "king", "peace", "living standard"};
+            String[] secondValues = {"king kong", "Happy", "PEACE"};
+            commonValues(firstValues,secondValues);
+
+
+
         }
+
+    /**
+     * Ques-2:
+     * Create a method to return factorial value of input-int-value
+     * points: 10
+     */
+    /*
+     *
+     * eg:
+     * input -> 5
+     * returned value -> (5*4*3*2*1) = 120
+     *
+     * input -> 1
+     * returned value -> (1) = 1
+     *
+     * input -> 3
+     * returned value -> (3*2*1) = 6
+     *
+     * input -> 10
+     * returned value -> (10*9*8*7*6*5*4*3*2*1) =
+     */
 
 
         public static void factorialValue (int factInput){
@@ -164,6 +185,38 @@ public class MidTermExam {
          * returned value -> [abcde, koli]
          *
          */
+
+
+    public static void commonValues (String[] firstInput, String[] secondInput){
+
+        boolean commonValuesNow = false;
+        ArrayList<String> commonValuesAsArrList = new ArrayList<>();
+
+        for (String i : firstInput){
+            for (String j : secondInput ){
+                if (i.equalsIgnoreCase(j)){
+                    commonValuesAsArrList.add(j);
+                    commonValuesNow = true;
+                }
+            }
+        }
+        if (!commonValuesNow){
+            System.out.println("\nThere are no Common Values");
+        }
+        else{
+            System.out.println("\nThe Common Values Are ---> " + commonValuesAsArrList);
+        }
+
+
+
+
+
+
+
+    }
+
+
+
 
 
 
@@ -209,6 +262,8 @@ public class MidTermExam {
             else if (inputVal1[i] > smallestMissingVal)
                 break;
         }
+
         return smallestMissingVal;
     }
+
 }
