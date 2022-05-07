@@ -1,4 +1,4 @@
-//import Web.MyDriver;
+import Web.MyDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -15,95 +15,95 @@ public class MidTermExam {
 
 
 
-//    @Test
-//    public void verifyTempSort (){
-//
-//        MyDriver.launchUrlOnNewWindow("https://www.darksky.net/");
-//
-//        MyDriver.getDriver().manage().window().maximize();
-//
-//
-//        String feelsLikeTemp = "//span[@class='feels-like-text']";
-//        By feelsLikeTempXpathLocByXpath = By.xpath(feelsLikeTemp);
-//        WebElement feelsLikeTempLocator = MyDriver.getDriver().findElement(feelsLikeTempXpathLocByXpath);
-//
-//
-//        String feelsLikeDisplayedF = feelsLikeTempLocator.getText();
-//        String feelsLikeDisplayedFDegRemoved = feelsLikeDisplayedF.substring(0,feelsLikeDisplayedF.length()-1);
-//        double feelsLikeTempVal = Integer.parseInt(feelsLikeDisplayedFDegRemoved);
-//
-//
-//
-//        String lowTemp = "//span[@class='low-temp-text']";
-//        By lowTempXpathLocByXpath = By.xpath(lowTemp);
-//        WebElement lowTempLocator = MyDriver.getDriver().findElement(lowTempXpathLocByXpath);
-//
-//
-//        String lowTempDisplayedF = lowTempLocator.getText();
-//        String lowTempDisplayedFDegRemoved = lowTempDisplayedF.substring(0,lowTempDisplayedF.length()-1);
-//        double lowTempVal = Integer.parseInt(lowTempDisplayedFDegRemoved);
-//
-//
-//        String highTemp = "//span[@class='high-temp-text']";
-//        By highTempXpathLocByXpath = By.xpath(highTemp);
-//        WebElement highTempLocator = MyDriver.getDriver().findElement(highTempXpathLocByXpath);
-//
-//
-//
-//
-//        String highTempDisplayedF = highTempLocator.getText();
-//        String highTempDisplayedFDegRemoved = highTempDisplayedF.substring(0,highTempDisplayedF.length()-1);
-//        double highTempVal = Integer.parseInt(highTempDisplayedFDegRemoved);
-//
-//        System.out.println("Feels Like Temp "+feelsLikeTempVal + "\n" +"Low Temp "+ lowTempVal + "\n" +"High Temp "+ highTempVal);
-//
-//        if (feelsLikeTempVal < lowTempVal)
-//            System.out.println("Feels Like Temp is lower than Low Temp");
-//        else
-//            System.out.println("Feels Like Temp is not lower than Low Temp");
-//
-//        if (feelsLikeTempVal > lowTempVal)
-//            System.out.println("Feels Like Temp is higher than Low Temp");
-//        else
-//            System.out.println("Feels Like Temp is not higher than Low Temp");
-//
-//        if (feelsLikeTempVal == lowTempVal)
-//            System.out.println("Feels Like Temp is equal with Low Temp");
-//        else
-//            System.out.println("Feels Like Temp is not equal with Low Temp");
-//
-//
-//        if (feelsLikeTempVal > highTempVal)
-//            System.out.println("Feels Like Temp is higher than High Temp");
-//        else
-//            System.out.println("Feels Like Temp is not higher than High Temp");
-//
-//        if (feelsLikeTempVal < highTempVal)
-//            System.out.println("Feels Like Temp is lower than High Temp");
-//        else
-//            System.out.println("Feels Like Temp is not lower than High Temp");
-//
-//        if (feelsLikeTempVal == highTempVal)
-//            System.out.println("Feels Like Temp is equal with High Temp");
-//        else
-//            System.out.println("Feels Like Temp is not equal with High Temp");
-//
-//        if (lowTempVal < highTempVal)
-//            System.out.println("Low Temp is lower than High Temp");
-//        else
-//            System.out.println("Low Temp is not lower than High Temp");
-//
-//        if (lowTempVal > highTempVal)
-//            System.out.println("Low Temp is higher than High Temp");
-//        else
-//            System.out.println("Low Temp is not higher than High Temp");
-//
-//        if (lowTempVal == highTempVal)
-//            System.out.println("Low Temp is equal with High Temp");
-//        else
-//            System.out.println("Low Temp is not equal with High Temp");
+    @Test
+    public void verifyTempSort (){
 
-    //}
+        MyDriver.launchUrlOnNewWindow("https://www.darksky.net/");
+
+        MyDriver.getDriver().manage().window().maximize();
+
+
+        String feelsLikeTemp = "//span[@class='feels-like-text']";
+        By feelsLikeTempXpathLocByXpath = By.xpath(feelsLikeTemp);
+        WebElement feelsLikeTempLocator = MyDriver.getDriver().findElement(feelsLikeTempXpathLocByXpath);
+
+
+        String feelsLikeDisplayedF = feelsLikeTempLocator.getText();
+        String feelsLikeDisplayedFDegRemoved = feelsLikeDisplayedF.substring(0,feelsLikeDisplayedF.length()-1);
+        double feelsLikeTempVal = Integer.parseInt(feelsLikeDisplayedFDegRemoved);
+
+
+
+        String lowTemp = "//span[@class='low-temp-text']";
+        By lowTempXpathLocByXpath = By.xpath(lowTemp);
+        WebElement lowTempLocator = MyDriver.getDriver().findElement(lowTempXpathLocByXpath);
+
+
+        String lowTempDisplayedF = lowTempLocator.getText();
+        String lowTempDisplayedFDegRemoved = lowTempDisplayedF.substring(0,lowTempDisplayedF.length()-1);
+        double lowTempVal = Integer.parseInt(lowTempDisplayedFDegRemoved);
+
+
+        String highTemp = "//span[@class='high-temp-text']";
+        By highTempXpathLocByXpath = By.xpath(highTemp);
+        WebElement highTempLocator = MyDriver.getDriver().findElement(highTempXpathLocByXpath);
+
+
+
+
+        String highTempDisplayedF = highTempLocator.getText();
+        String highTempDisplayedFDegRemoved = highTempDisplayedF.substring(0,highTempDisplayedF.length()-1);
+        double highTempVal = Integer.parseInt(highTempDisplayedFDegRemoved);
+
+        System.out.println("Feels Like Temp "+feelsLikeTempVal + "\n" +"Low Temp "+ lowTempVal + "\n" +"High Temp "+ highTempVal);
+
+        if (feelsLikeTempVal < lowTempVal)
+            System.out.println("Feels Like Temp is lower than Low Temp");
+        else
+            System.out.println("Feels Like Temp is not lower than Low Temp");
+
+        if (feelsLikeTempVal > lowTempVal)
+            System.out.println("Feels Like Temp is higher than Low Temp");
+        else
+            System.out.println("Feels Like Temp is not higher than Low Temp");
+
+        if (feelsLikeTempVal == lowTempVal)
+            System.out.println("Feels Like Temp is equal with Low Temp");
+        else
+            System.out.println("Feels Like Temp is not equal with Low Temp");
+
+
+        if (feelsLikeTempVal > highTempVal)
+            System.out.println("Feels Like Temp is higher than High Temp");
+        else
+            System.out.println("Feels Like Temp is not higher than High Temp");
+
+        if (feelsLikeTempVal < highTempVal)
+            System.out.println("Feels Like Temp is lower than High Temp");
+        else
+            System.out.println("Feels Like Temp is not lower than High Temp");
+
+        if (feelsLikeTempVal == highTempVal)
+            System.out.println("Feels Like Temp is equal with High Temp");
+        else
+            System.out.println("Feels Like Temp is not equal with High Temp");
+
+        if (lowTempVal < highTempVal)
+            System.out.println("Low Temp is lower than High Temp");
+        else
+            System.out.println("Low Temp is not lower than High Temp");
+
+        if (lowTempVal > highTempVal)
+            System.out.println("Low Temp is higher than High Temp");
+        else
+            System.out.println("Low Temp is not higher than High Temp");
+
+        if (lowTempVal == highTempVal)
+            System.out.println("Low Temp is equal with High Temp");
+        else
+            System.out.println("Low Temp is not equal with High Temp");
+
+    }
 
         /**
          * Ques-2:
