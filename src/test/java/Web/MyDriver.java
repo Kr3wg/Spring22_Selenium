@@ -18,7 +18,13 @@ public class MyDriver {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
     }
+
+    public static void maximizeWindow (){
+        MyDriver.getDriver().manage().window().maximize();
+    }
+
 
     public static void quitWindows() {
         driver.quit();
@@ -27,6 +33,7 @@ public class MyDriver {
     public static WebDriver getDriver() {
         return driver;
     }
+
 
 
 

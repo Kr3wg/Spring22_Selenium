@@ -46,6 +46,11 @@ public class Commands {
     // Create a local method to type in the webElement
     public void type(By locator, String data) {
         findWebElement(locator).sendKeys(data);
+        Misc.pause(2);
+    }
+
+    public void goBackToPreviousPage (){
+        MyDriver.getDriver().navigate().back();
     }
 
     public String getTextOfWebElement(By locator) {
@@ -58,7 +63,7 @@ public class Commands {
 
     // Create a local method to click on the webElement
     public void clickIt(By locator) {
-        findWebElement(locator).click();
+        findWebElementWithWait(locator).click();
     }
 
     // Create a local method to clear input from a webElement

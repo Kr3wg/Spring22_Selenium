@@ -1,5 +1,16 @@
 package Class5;
 
+import Helper.Misc;
+import Web.MyDriver;
+import org.junit.Assert;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class exHomework3 {
 
     @Test
@@ -36,10 +47,10 @@ public class exHomework3 {
         double actualTempValInCUsingF = Math.round((fahrenheitTempVal-32)*5/9);
         double actualTempValInFUsingC = Math.floor((celsiusTempVal * 9/5 )+ 32 );
 
-        Assert.assertEquals(actualTempValInCUsingF,celsiusTempVal,"The conversion is incorrect");
-        Assert.assertEquals(actualTempValInFUsingC,fahrenheitTempVal,"The conversion is incorrect");
+        Assert.assertEquals(String.valueOf(actualTempValInCUsingF),celsiusTempVal,"The conversion is incorrect");
+        Assert.assertEquals(String.valueOf(actualTempValInFUsingC),fahrenheitTempVal,"The conversion is incorrect");
 
-        MyDriver.quitWindow();
+        MyDriver.quitWindows();
     }
 
 
@@ -83,7 +94,7 @@ public class exHomework3 {
 
         Assert.assertEquals(year,yearTextValue,"Current year is not present");
 
-        MyDriver.quitWindow();
+        MyDriver.quitWindows();
     }
 
     @Test
@@ -111,12 +122,12 @@ public class exHomework3 {
                 findElement(By.xpath("//h1[@class='page-heading']"));
 
         boolean isItDisplayed = economicChairTextElement.isDisplayed();
-        Assert.assertTrue(isItDisplayed,"It is not displayed");
+        Assert.assertTrue("It is not displayed", isItDisplayed);
 
         String text= economicChairTextElement.getText();
         Assert.assertEquals(text,"ECONOMY CHURCH CHAIRS","Wrong title is present");
 
-        MyDriver.quitWindow();
+        MyDriver.quitWindows();
 
 
     }

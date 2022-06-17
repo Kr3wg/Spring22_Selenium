@@ -24,7 +24,7 @@ public class SignInPage extends Commands {
 
 
 
-    public void typeEmailAddress (String emailAddress){
+    public void typeEmailAddressSIP (String emailAddress){
       type(emailBoxLocator , emailAddress);}
 
     public void typePassword (String password){
